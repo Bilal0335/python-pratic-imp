@@ -1,0 +1,9 @@
+words=[
+"bilal",
+"jutt",
+"beutiful",
+"webdevelopmet",
+"python",
+"apple",
+"mango"
+]
