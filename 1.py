@@ -83,3 +83,36 @@
 # print(insructor_1.follr)
 
 
+class Human:
+               def __init__(self,num_heart):
+                       self.num_eye = 2
+                       self.num_arm = 2
+                       self.num_heart = num_heart
+               def eat(self):
+                       print("i can eat")
+               def work(self):
+                       print("i can work")
+class Male(Human):
+        def __init__(self,name,heart):
+                super().__init__(heart)
+                self.name = name
+                
+        def flirt(self):
+                print("I can Flirt")
+        def work(self):
+               super().work()
+               print("I can Code")
+        def eat(self):
+                super().eat()
+                print("i can biryani")
+        def display(self):
+                print(f"Hi, I am {self.name} and I have {self.num_heart} heart")
+male_1 = Male("bilal",1)
+
+male_1.flirt()
+male_1.eat()
+male_1.work()
+print(f"number of eye is : {male_1.num_eye}")
+print(f"number of eye is : {male_1.num_arm}")
+print(f"number of hear is : {male_1.num_heart}")
+male_1.display()
