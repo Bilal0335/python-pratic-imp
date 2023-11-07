@@ -119,36 +119,70 @@
 
 
 
-class Human:
-               def __init__(self):
-                       self.name_eye = 2
-                       self.name_nose = 1
-               def eat(self):
-                       print("i can eat")
-               def work(self):
-                       print("I can work")
-class Male:
-        def __init__(self,name):
-                self.name = name
-        def flirt(self):
-                print("I can Flirt")    
-        def work(self):
-                # super().work()
-                print("I can code")
+# class Human:
+#                def __init__(self):
+#                        self.name_eye = 2
+#                        self.name_nose = 1
+#                def eat(self):
+#                        print("i can eat")
+#                def work(self):
+#                        print("I can work")
+# class Male:
+#         def __init__(self,name):
+#                 self.name = name
+#         def flirt(self):
+#                 print("I can Flirt")    
+#         def work(self):
+#                 # super().work()
+#                 print("I can code")
                
-class Boy(Male,Human):
-        def sleep(self):
-                print("I can Sleep")
-        def work(self):
-                # super().work()
-                print("i can test")
+# class Boy(Male,Human):
+#         def sleep(self):
+#                 print("I can Sleep")
+#         def work(self):
+#                 # super().work()
+#                 print("i can test")
 
 
-boy_1 = Boy("bilal")
-print(boy_1.)
+# boy_1 = Boy("bilal")
+# print(boy_1.)
 # boy_1.work()
 # Boy.mro()
 # print(Boy.mro())
 # boy_1.work()
 # Male.work(boy_1)
 # Human.eat(boy_1)
+
+
+class Human:
+               def __init__(self,num_heart):
+                       print("human class")
+                       self.name_eye = 2
+                       self.name_arm = 2          
+                       self.num_heart = num_heart         
+               def eat(self):
+                       print("i can eat")
+               def work(self):
+                       print("I can work")
+class Male(Human):
+               def __init__(self,name):
+                       print("init male class")
+                       self.name = name
+               def sleep(self):
+                       print("i can sleep")
+
+class Boy(Male):
+               def work(self):
+                #        Human.work(self)
+                       super().work()
+                       print("I can code")
+
+class Programmer:
+        def work(self):
+                print("I can write programmer")
+obj = Boy(1)
+# obj.work()
+# prog_1= Programmer()
+# prog_1.work()
+print(obj.name_eye)
+print(Boy.mro())
